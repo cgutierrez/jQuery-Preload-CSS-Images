@@ -104,7 +104,7 @@
 				}
 			}
 			//parse cssPile for image urls
-			var tmpImage = cssPile.match(/[^\("]+\.(gif|jpg|jpeg|png)/g);//reg ex to get a string of between a "(" and a ".filename" / '"' for opera-bugfix
+			var tmpImage = cssPile.match(/[^\(\'\"]+\.(gif|jpg|jpeg|png)[^\)\'\"]+/g);//reg ex to get a string of between a "(" and a ".filename" / '"' for opera-bugfix
 			if(tmpImage){
 				var i = tmpImage.length;
 				while(i--){ // handle baseUrl here for multiple stylesheets in different folders bug
